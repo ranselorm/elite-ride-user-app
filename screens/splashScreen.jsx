@@ -1,6 +1,7 @@
 import { View, StyleSheet, Text, Pressable, Image } from "react-native";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
-const SplashScreen = () => {
+const SplashScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
@@ -17,7 +18,7 @@ const SplashScreen = () => {
         </Text>
         <Pressable
           style={styles.button}
-          onPress={() => alert("Button pressed")}
+          onPress={() => navigation.navigate("Register")}
         >
           <Text style={styles.buttonText}>Let's Get Started</Text>
         </Pressable>
@@ -33,15 +34,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     position: "relative",
+    width: "100%",
   },
   imageContainer: {
     // backgroundColor: "red",
-    paddingTop: 130,
+    paddingTop: 100,
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    width: "140%",
-    height: "140%",
+    width: "120%",
+    height: "120%",
   },
   img: {
     objectFit: "contain",
@@ -65,11 +67,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
   },
 
   titleText: {
-    fontSize: 27,
+    // fontSize: 25,
+    fontSize: RFValue(26),
     textAlign: "center",
     fontWeight: "bold",
   },
@@ -78,7 +81,8 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     textAlign: "center",
-    fontSize: 15,
+    fontSize: RFValue(16),
+    // fontSize: 18,
     marginVertical: 20,
   },
 
@@ -93,17 +97,20 @@ const styles = StyleSheet.create({
     backgroundColor: "#007FFF",
   },
   buttonText: {
-    fontSize: 18,
+    // fontSize: 18,
+    fontSize: RFValue(16),
+
     lineHeight: 21,
-    // fontWeight: "bold",
+    fontWeight: "bold",
     letterSpacing: 0.25,
     color: "white",
   },
 
   paragraph2: {
     marginTop: 20,
-    fontSize: 15,
-    color: "black",
+    fontSize: RFValue(16),
+
+    // color: "black",
     fontWeight: "500",
   },
   span2: {
