@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
   buttonText: {
     // fontSize: 18,
     fontSize: RFValue(16),
-
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
