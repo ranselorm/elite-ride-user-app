@@ -12,7 +12,10 @@ const Onboarding = () => {
 
   return (
     <View style={styles.container}>
-      <ScrollView style={styles.scrollViewContent}>
+      <ScrollView
+        style={styles.scrollViewContent}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={styles.content}>
           <Text style={styles.text}>Firstname</Text>
           <TextInput style={styles.input} multiline />
@@ -93,6 +96,7 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     justifyContent: "space-between",
     gap: 20,
+    overflow: "hidden",
   },
   password: {
     flexDirection: "row",
